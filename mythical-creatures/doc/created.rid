@@ -1,0 +1,19 @@
+Mon, 03 Nov 2025 11:03:35 +0100
+./README.md	Sat, 01 Nov 2025 20:11:41 +0100
+./lib/dragon.rb	Sun, 02 Nov 2025 21:17:45 +0100
+./lib/unicorn.rb	Sun, 02 Nov 2025 21:07:17 +0100
+./lib/hobbit.rb	Mon, 03 Nov 2025 11:03:33 +0100
+./lib/vampire.rb	Sun, 02 Nov 2025 21:11:24 +0100
+./spec/direwolf_spec.rb	Sat, 01 Nov 2025 20:11:41 +0100
+./spec/werewolf_spec.rb	Sat, 01 Nov 2025 20:11:41 +0100
+./spec/hobbit_spec.rb	Mon, 03 Nov 2025 11:00:44 +0100
+./spec/dragon_spec.rb	Sat, 01 Nov 2025 20:11:41 +0100
+./spec/ogre_spec.rb	Sat, 01 Nov 2025 20:11:41 +0100
+./spec/unicorn_spec.rb	Sat, 01 Nov 2025 20:11:41 +0100
+./spec/medusa_spec.rb	Sat, 01 Nov 2025 20:11:41 +0100
+./spec/lovisa_spec.rb	Sat, 01 Nov 2025 20:11:41 +0100
+./spec/pirate_spec.rb	Sat, 01 Nov 2025 20:11:41 +0100
+./spec/wizard_spec.rb	Sat, 01 Nov 2025 20:11:41 +0100
+./spec/centaur_spec.rb	Sat, 01 Nov 2025 20:11:41 +0100
+./spec/vampire_spec.rb	Sat, 01 Nov 2025 20:11:41 +0100
+./spec/spec_helper.rb	Sat, 01 Nov 2025 20:11:41 +0100

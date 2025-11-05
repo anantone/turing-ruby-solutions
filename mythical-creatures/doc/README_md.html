@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>README - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+  var index_rel_prefix = "./";
+</script>
+
+<script src="./js/navigation.js" defer></script>
+<script src="./js/search.js" defer></script>
+<script src="./js/search_index.js" defer></script>
+<script src="./js/searcher.js" defer></script>
+<script src="./js/darkfish.js" defer></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+<div class="nav-section">
+  <h3>Table of Contents</h3>
+
+  <ul class="link-list" role="directory">
+    <li><a href="#label-Mythical+Creatures">Mythical Creatures</a>
+    <li><a href="#label-How+to+Run">How to Run</a>
+    <li><a href="#label-Suggested+Order">Suggested Order</a>
+    <li><a href="#label-Extra+Challenges">Extra Challenges</a>
+    <li><a href="#label-Testing+with+RSpec">Testing with RSpec</a>
+    <li><a href="#label-The+Dreaded+if+Statement">The Dreaded <code>if</code> Statement</a>
+    <li><a href="#label-Imagine+Two+Creatures">Imagine Two Creatures</a>
+    <li><a href="#label-So+you+feel+like+going+on+a+journey-3F">So you feel like going on a journey?</a>
+  </ul>
+</div>
+
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./README_md.html">README</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page README.md">
+
+<h1 id="label-Mythical+Creatures">Mythical Creatures<span><a href="#label-Mythical+Creatures">&para;</a> <a href="#top">&uarr;</a></span></h1>
+
+<p>A collection of exercises to practice Ruby, and test-driven design (TDD).</p>
+
+<p>Here&#39;s a guide that might be helpful in understanding the principles covered in these tests: <a href="https://josh.works/turing-backend-prep-mythical-creatures">josh.works/turing-backend-prep-mythical-creatures</a>.</p>
+
+<h2 id="label-How+to+Run">How to Run<span><a href="#label-How+to+Run">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>In order to complete these exercises create a class for each of the mythical creatures in the <code>spec</code> directory.</p>
+
+<p>Navigate to the <code>mythical-creatures</code> directory in your terminal, and then run your first test:</p>
+
+<pre class="ruby"><span class="ruby-identifier">rspec</span> <span class="ruby-identifier">spec</span><span class="ruby-operator">/</span><span class="ruby-identifier">unicorn_spec</span>.<span class="ruby-identifier">rb</span>
+</pre>
+
+<p>If you get an error regarding a certain gem not being installed, you may need to run the following command from your terminal:</p>
+
+<pre class="ruby"><span class="ruby-identifier">bundle</span> <span class="ruby-identifier">install</span>
+</pre>
+
+<p>There&#39;s a video walk-through of the setup and the whole <code>unicorn_spec.rb</code> file here: <a href="https://youtu.be/mocwGsu41yw">youtu.be/mocwGsu41yw</a>.</p>
+
+<p>Continue to follow the errors that your test provides until the test passes. Then, unskip the next test by removing the line that says <code>skip</code>. Continue until all tests pass for all creatures.</p>
+
+<h2 id="label-Suggested+Order">Suggested Order<span><a href="#label-Suggested+Order">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p><code>unicorn_spec.rb</code> <a href="https://youtu.be/mocwGsu41yw">video walk-through</a> (watch this first)</p>
+</li><li>
+<p><code>vampire_spec.rb</code></p>
+</li><li>
+<p><code>dragon_spec.rb</code> <a href="https://youtu.be/NIPerY-xuCk">video walk-through</a></p>
+</li><li>
+<p><code>hobbit_spec.rb</code> <a href="https://youtu.be/uYGS-DCNR-0">video walk-through</a></p>
+</li><li>
+<p><code>pirate_spec.rb</code></p>
+</li><li>
+<p><code>wizard_spec.rb</code></p>
+</li><li>
+<p><code>medusa_spec.rb</code></p>
+</li><li>
+<p><code>werewolf_spec.rb</code></p>
+</li><li>
+<p><code>centaur_spec.rb</code></p>
+</li><li>
+<p><code>ogre_spec.rb</code></p>
+</li><li>
+<p><code>direwolf_spec.rb</code></p>
+</li><li>
+<p><code>the_journey_spec.rb</code> (see below)</p>
+</li></ul>
+
+<h2 id="label-Extra+Challenges">Extra Challenges<span><a href="#label-Extra+Challenges">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<h3 id="label-Testing+with+RSpec">Testing with RSpec<span><a href="#label-Testing+with+RSpec">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p><a href="https://gist.github.com/ap2322/d8081e38d448acccf2cdc25308be565f">How to use RSpec without Rails</a> for these exercises.</p>
+</li><li>
+<p><a href="http://tutorials.jumpstartlab.com/topics/internal_testing/rspec_and_bdd.html">You can check out one of our tutorials about RSpec</a> or <a href="http://gregelizondo.github.io/2014/03/03/getting-started-with-rspec-and-unit-testing.html">this blog post</a></p>
+</li><li>
+<p>Pick three of the creatures and implement RSpec tests for each</p>
+</li><li>
+<p>For each creature, add at least three additional tests / pieces of functionality</p>
+</li><li>
+<p>Submit pull requests adding the RSpec tests to the repository</p>
+</li></ul>
+
+<h3 id="label-The+Dreaded+if+Statement">The Dreaded <code>if</code> Statement<span><a href="#label-The+Dreaded+if+Statement">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Can you complete implementations of each of the creatures without using <code>if</code> statements? Think about how removing them affects your code. Remember that a <code>case</code> is just a different form of <code>if</code>, so don&#39;t use it.</p>
+
+<h3 id="label-Imagine+Two+Creatures">Imagine Two Creatures<span><a href="#label-Imagine+Two+Creatures">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Can you add two new creatures to the repository? How about a Hydra? Add rspec tests exercising some of the following concepts:</p>
+<ul><li>
+<p>Passing data into <code>initialize</code></p>
+</li><li>
+<p>Using methods to change the internal state of an instance</p>
+</li><li>
+<p>Using methods to query the internal state of an instance</p>
+</li><li>
+<p>Functionality that necessitates the internal use of an Array</p>
+</li></ul>
+
+<h3 id="label-So+you+feel+like+going+on+a+journey-3F">So you feel like going on a journey?<span><a href="#label-So+you+feel+like+going+on+a+journey-3F">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Are you up for an adventure traveller? This test involves the creation of new creatures as well as calling upon  creatures from times once past.</p>
+
+<p>To get gold you are required to complete quests that act as mini exercisms; you will see three kinds:  1. The number of times a letter is different.  2. Adding up the sum of a number and then squaring it i.e. for 5 =&gt; 225 = (1 + 2 + 3 + 4 + 5)**  3. Turning a num into a roman numeral.</p>
+
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.2.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
