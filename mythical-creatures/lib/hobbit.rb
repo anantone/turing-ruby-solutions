@@ -1,8 +1,9 @@
-#From LOTR universe
-class Hobbit
+# frozen_string_literal: true
 
-  AGES = {adult:  33,
-            old: 101}
+# From LOTR universe
+class Hobbit
+  AGES = { adult: 33,
+           old: 101 }.freeze
   DEFAULT_DISPOSITION = 'homebody'
   SHORT_HEIGHT = true
   RING_HOLDER = 'Frodo'
@@ -34,12 +35,11 @@ class Hobbit
     self.age >= AGES[:old]
   end
 
-  def has_ring?
-    self.name == RING_HOLDER
+  def ring?
+    name == RING_HOLDER
   end
 
-  def is_short?
+  def short?
     SHORT_HEIGHT
   end
-
 end

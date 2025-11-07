@@ -1,5 +1,6 @@
-class Unicorn
+# frozen_string_literal: true
 
+class Unicorn
   private
 
   attr_writer :name, :color
@@ -18,7 +19,6 @@ class Unicorn
   end
 
   def say(stuff)
-    '**;* ' + stuff + ' **;*'
+    "**;* #{stuff} **;*"
   end
-
 end

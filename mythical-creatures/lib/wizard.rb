@@ -1,12 +1,13 @@
-class Wizard
+# frozen_string_literal: true
 
+class Wizard
   NUMBER_OF_SPELLS_BEFORE_TIRED = 3
 
   private
 
   attr_writer :name, :bearded
 
-  def initialize name, bearded: true
+  def initialize(name, bearded: true)
     self.name = name
     self.bearded = bearded
     self.rested = NUMBER_OF_SPELLS_BEFORE_TIRED
@@ -22,11 +23,11 @@ class Wizard
   end
 
   def rested?
-    rested > 0
+    rested.positive?
   end
 
-  def incantation formula
-    'sudo ' + formula
+  def incantation(formula)
+    "sudo #{formula}"
   end
 
   def cast

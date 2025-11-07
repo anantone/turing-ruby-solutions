@@ -1,5 +1,6 @@
-class Pirate
+# frozen_string_literal: true
 
+class Pirate
   DEFAULT_JOB = 'Scallywag'
   HEINOUS_ACTS_TO_BECOME_CURSED = 3
   BOOTY_PER_ROBBED_SHIP = 100
@@ -21,7 +22,7 @@ class Pirate
   attr_reader :name, :job
 
   def cursed?
-    self.bad_karma >= HEINOUS_ACTS_TO_BECOME_CURSED
+    bad_karma >= HEINOUS_ACTS_TO_BECOME_CURSED
   end
 
   def commit_heinous_act
@@ -31,6 +32,4 @@ class Pirate
   def rob_a_ship
     self.booty += BOOTY_PER_ROBBED_SHIP
   end
-
 end
-

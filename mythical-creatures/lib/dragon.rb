@@ -1,5 +1,6 @@
-class Dragon
+# frozen_string_literal: true
 
+class Dragon
   private
 
   attr_writer :name, :color, :rider
@@ -24,5 +25,4 @@ class Dragon
   def eat
     self.food += 1
   end
-
 end

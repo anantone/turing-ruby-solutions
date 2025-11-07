@@ -1,5 +1,6 @@
-class Vampire
+# frozen_string_literal: true
 
+class Vampire
   private
 
   attr_writer :name, :pet
@@ -18,5 +19,4 @@ class Vampire
   def drink
     self.thirsty = false
   end
-
 end
