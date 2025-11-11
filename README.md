@@ -1,1 +1,1 @@
-My solutions to https://github.com/turingschool-examples/ruby-exercises
+My solutions to https://github.com/turingschool-examples/ruby-exercises (WIP)
