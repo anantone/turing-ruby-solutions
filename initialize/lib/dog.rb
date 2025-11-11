@@ -1,5 +1,6 @@
-class Dog
+# frozen_string_literal: true
 
+class Dog
   private
 
   attr_writer :name, :breed
@@ -14,7 +15,6 @@ class Dog
   attr_reader :name, :breed
 
   def greeting
-    "Woof, I'm %<name>s the %<breed>s!" % {name: name, breed: breed}
+    format("Woof, I'm %<name>s the %<breed>s!", name: name, breed: breed)
   end
-
 end

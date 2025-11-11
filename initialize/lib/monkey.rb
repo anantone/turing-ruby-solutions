@@ -1,10 +1,11 @@
-class Monkey
+# frozen_string_literal: true
 
+class Monkey
   private
 
   attr_writer :name, :type, :favorite_food
 
-  def initialize args
+  def initialize(args)
     self.name,
     self.type,
     self.favorite_food = args
@@ -13,5 +14,4 @@ class Monkey
   public
 
   attr_reader :name, :type, :favorite_food
-
 end

@@ -1,12 +1,13 @@
-RSpec.describe 'map pattern' do
+# frozen_string_literal: true
 
+RSpec.describe 'map pattern' do
   it 'capitalizes' do
-    names = ["alice", "bob", "charlie"]
+    names = %w[alice bob charlie]
     capitalized_names = []
     names.each do |name|
       capitalized_names << name.capitalize
     end
-    expect(capitalized_names).to eq(["Alice", "Bob", "Charlie"])
+    expect(capitalized_names).to eq(%w[Alice Bob Charlie])
   end
 
   it 'doubles' do
@@ -28,7 +29,7 @@ RSpec.describe 'map pattern' do
   end
 
   it 'lengths' do
-    names = ["alice", "bob", "charlie", "david", "eve"]
+    names = %w[alice bob charlie david eve]
     lengths = []
     names.each do |name|
       lengths.push(name.length)
@@ -37,42 +38,42 @@ RSpec.describe 'map pattern' do
   end
 
   it 'normalize zip codes' do
-    numbers = [234, 10, 9119, 38881]
+    numbers = [234, 10, 9119, 38_881]
     zip_code = []
     numbers.each do |number|
-      zip_code.push("%05d" % number)
+      zip_code.push('%05d' % number)
     end
-    expect(zip_code).to eq(["00234", "00010", "09119", "38881"])
+    expect(zip_code).to eq(%w[00234 00010 09119 38881])
   end
 
   it 'backwards' do
-    names = ["alice", "bob", "charlie", "david", "eve"]
+    names = %w[alice bob charlie david eve]
     backwards = []
     names.each do |name|
       backwards.push(name.reverse)
     end
-    expect(backwards).to eq(["ecila", "bob", "eilrahc", "divad", "eve"])
+    expect(backwards).to eq(%w[ecila bob eilrahc divad eve])
   end
 
   it 'words with no vowels' do
-    words = ["green", "sheep", "travel", "least", "boat"]
+    words = %w[green sheep travel least boat]
     without_vowels = []
     words.each do |word|
-      wrd = ""
+      wrd = ''
       word.each_char do |char|
-        wrd += char unless "aeiou".include?(char)
+        wrd += char unless 'aeiou'.include?(char)
       end
       without_vowels.push(wrd)
     end
-    expect(without_vowels).to  eq(["grn", "shp", "trvl", "lst", "bt"])
+    expect(without_vowels).to eq(%w[grn shp trvl lst bt])
   end
 
   it 'trims last letter' do
-    animals = ["dog", "cat", "mouse", "frog", "platypus"]
+    animals = %w[dog cat mouse frog platypus]
     trimmed = []
     animals.each do |animal|
       trimmed.push(animal[...-1])
     end
-    expect(trimmed).to eq(["do", "ca", "mous", "fro", "platypu"])
+    expect(trimmed).to eq(%w[do ca mous fro platypu])
   end
 end

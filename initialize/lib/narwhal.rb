@@ -1,10 +1,11 @@
-class Narwhal
+# frozen_string_literal: true
 
+class Narwhal
   private
 
   attr_writer :name, :weight, :cute
 
-  def initialize args
+  def initialize(args)
     self.name = args[:name]
     self.weight = args[:weight]
     self.cute = args[:cute]
@@ -17,5 +18,4 @@ class Narwhal
   def cute?
     cute
   end
-
 end

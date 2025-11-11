@@ -1,10 +1,11 @@
-class Lion
+# frozen_string_literal: true
 
+class Lion
   private
 
   attr_writer :name, :sound
 
-  def initialize args
+  def initialize(args)
     self.name = args[:name]
     self.sound = args[:sound]
   end
@@ -12,5 +13,4 @@ class Lion
   public
 
   attr_reader :name, :sound
-
 end

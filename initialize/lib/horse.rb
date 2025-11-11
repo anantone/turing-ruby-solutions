@@ -1,5 +1,6 @@
-class Horse
+# frozen_string_literal: true
 
+class Horse
   private
 
   attr_writer :name, :diet
@@ -16,5 +17,4 @@ class Horse
   def add_to_diet(food)
     diet.push(food)
   end
-
 end

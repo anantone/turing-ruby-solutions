@@ -16,13 +16,15 @@ class Centaur
   attr_accessor :cranky, :standing
 
   def run
-    return 'NO!' if  self.laying?
+    return 'NO!' if laying?
+
     self.cranky += 1
     'Clop clop clop clop!'
   end
 
   def shoot
-    return 'NO!' if self.cranky? || self.laying?
+    return 'NO!' if cranky? || laying?
+
     self.cranky += 1
     'Twang!!!'
   end
@@ -32,7 +34,8 @@ class Centaur
   end
 
   def sleep
-    return 'NO!' if self.standing?
+    return 'NO!' if standing?
+
     self.cranky = 0
   end
 
@@ -53,8 +56,9 @@ class Centaur
   end
 
   def drink_potion
-    return 'NO!' if self.laying?
+    return 'NO!' if laying?
     return 'Feeling sick!' if cranky.zero?
+
     self.cranky = 0
   end
 end

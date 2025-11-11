@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe 'Basic Enums Test' do
   it 'solve for x' do
     s = ''
@@ -9,7 +11,6 @@ RSpec.describe 'Basic Enums Test' do
 
   xit 'simple sum' do
     sum = 0
-    numbers = [1, 2, 3, 4, 5]
     # write code here
     expect(sum).to eq(15)
   end

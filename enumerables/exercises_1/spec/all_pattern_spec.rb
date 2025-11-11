@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe 'All Pattern' do
   it 'all zeros' do
     numbers = [0, 0, 0, 0, 0, 0, 0]
@@ -18,7 +20,7 @@ RSpec.describe 'All Pattern' do
   end
 
   it 'all gone' do
-    words = ["gone", "gone", "gone", "gone", "gone", "gone", "gone"]
+    words = %w[gone gone gone gone gone gone gone]
     all_gone = true
     words.each do |word|
       all_gone = false unless word == 'gone'
@@ -27,7 +29,7 @@ RSpec.describe 'All Pattern' do
   end
 
   it 'not all gone' do
-    words = ["gone", "gone", "gone", "gone", "gone", "there", "gone", "gone"]
+    words = %w[gone gone gone gone gone there gone gone]
     all_gone = true
     words.each do |word|
       all_gone = false unless word == 'gone'
@@ -36,7 +38,7 @@ RSpec.describe 'All Pattern' do
   end
 
   it 'all empty' do
-    strings = ["", "", "", "", "", "", ""]
+    strings = ['', '', '', '', '', '', '']
     all_empty = true
     strings.each do |string|
       all_empty = false unless string.empty?
@@ -45,7 +47,7 @@ RSpec.describe 'All Pattern' do
   end
 
   it 'not all empty' do
-    strings = ["", "", "", "full", "", "", ""]
+    strings = ['', '', '', 'full', '', '', '']
     all_empty = true
     strings.each do |string|
       all_empty = false unless string.empty?
@@ -54,7 +56,7 @@ RSpec.describe 'All Pattern' do
   end
 
   it 'not all uppercase' do
-    words = ["DOUGHNUT", "CASH", "MAIN", "bOWl", "SMACK", "SAND"]
+    words = %w[DOUGHNUT CASH MAIN bOWl SMACK SAND]
     all_caps = true
     words.each do |word|
       all_caps = false unless word == word.upcase
@@ -66,7 +68,7 @@ RSpec.describe 'All Pattern' do
     lies = [false, false, false, false]
     all_lies = true
     lies.each do |lie|
-      all_lies = false unless !lie
+      all_lies = false if lie
     end
     expect(all_lies).to eq(true)
   end
@@ -90,7 +92,7 @@ RSpec.describe 'All Pattern' do
   end
 
   it 'all four letter words' do
-    words = ["love", "hate", "fire", "bird", "call"]
+    words = %w[love hate fire bird call]
     all_4_letters = true
     words.each do |word|
       all_4_letters = false unless word.length == 4

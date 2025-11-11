@@ -1,5 +1,6 @@
-class Beaver
+# frozen_string_literal: true
 
+class Beaver
   private
 
   attr_writer :name
@@ -11,5 +12,4 @@ class Beaver
   public
 
   attr_reader :name
-
 end

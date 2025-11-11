@@ -1,9 +1,10 @@
-RSpec.describe 'map' do
+# frozen_string_literal: true
 
+RSpec.describe 'map' do
   it 'capitalizes' do
-    names = ["alice", "bob", "charlie"]
-    capitalized_names = names.map { |name| name.capitalize }
-    expect(capitalized_names).to eq(["Alice", "Bob", "Charlie"])
+    names = %w[alice bob charlie]
+    capitalized_names = names.map(&:capitalize)
+    expect(capitalized_names).to eq(%w[Alice Bob Charlie])
   end
 
   it 'doubles' do
@@ -19,35 +20,34 @@ RSpec.describe 'map' do
   end
 
   it 'lengths' do
-    names = ["alice", "bob", "charlie", "david", "eve"]
-    lengths = names.map { |name| name.length }
+    names = %w[alice bob charlie david eve]
+    lengths = names.map(&:length)
     expect(lengths).to eq([5, 3, 7, 5, 3])
   end
 
   it 'normalize zip codes' do
-    numbers = [234, 10, 9119, 38881]
-    zip_codes = numbers.map { |number| "%05d" % number }
-    expect(zip_codes).to eq(["00234", "00010", "09119", "38881"])
+    numbers = [234, 10, 9119, 38_881]
+    zip_codes = numbers.map { |number| '%05d' % number }
+    expect(zip_codes).to eq(%w[00234 00010 09119 38881])
   end
 
   it 'backwards' do
-    names = ["alice", "bob", "charlie", "david", "eve"]
-    backwards = names.map { |name| name.reverse }
-    expect(backwards).to eq(["ecila", "bob", "eilrahc", "divad", "eve"])
+    names = %w[alice bob charlie david eve]
+    backwards = names.map(&:reverse)
+    expect(backwards).to eq(%w[ecila bob eilrahc divad eve])
   end
 
   it 'words with no vowels' do
-    words = ["green", "sheep", "travel", "least", "boat"]
+    words = %w[green sheep travel least boat]
     without_vowels = words.map do |word|
-      word.chars.map { |char| char unless "aeiou".include?(char) }.join
+      word.chars.map { |char| char unless 'aeiou'.include?(char) }.join
     end
-    expect(without_vowels).to eq(["grn", "shp", "trvl", "lst", "bt"])
+    expect(without_vowels).to eq(%w[grn shp trvl lst bt])
   end
 
   it 'trims last letter' do
-    animals = ["dog", "cat", "mouse", "frog", "platypus"]
+    animals = %w[dog cat mouse frog platypus]
     trimmed = animals.map { |animal| animal[...-1] }
-    expect(trimmed).to eq(["do", "ca", "mous", "fro", "platypu"])
+    expect(trimmed).to eq(%w[do ca mous fro platypu])
   end
 end
-

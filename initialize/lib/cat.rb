@@ -1,5 +1,6 @@
-class Cat
+# frozen_string_literal: true
 
+class Cat
   SOUND = 'meow'
 
   private
@@ -7,7 +8,7 @@ class Cat
   attr_writer :name
 
   def initialize(name)
-    self.name = "#{name}"
+    self.name = name.to_s
   end
 
   public
@@ -17,5 +18,4 @@ class Cat
   def sound
     SOUND
   end
-
 end
